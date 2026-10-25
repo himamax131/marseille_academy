@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00A8E8"/>
+      <stop offset="100%" style="stop-color:#0077B6"/>
+    </linearGradient>
+    <linearGradient id="innerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A1628"/>
+      <stop offset="100%" style="stop-color:#1E3A5F"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGrad)" filter="url(#glow)"/>
+  
+  <!-- Inner dark circle -->
+  <circle cx="100" cy="100" r="82" fill="url(#innerGrad)"/>
+  
+  <!-- Accent ring -->
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#00D4FF" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Stylized M inspired by OM -->
+  <path d="M45 140 L45 60 L70 60 L100 110 L130 60 L155 60 L155 140 L135 140 L135 90 L110 130 L90 130 L65 90 L65 140 Z" 
+        fill="#FFFFFF" 
+        stroke="#00D4FF" 
+        stroke-width="1.5"/>
+  
+  <!-- Small star above M (OM style) -->
+  <polygon points="100,28 104,40 116,40 106,48 110,60 100,52 90,60 94,48 84,40 96,40" 
+           fill="#FFD700"/>
+  
+  <!-- Bottom text arc simulation -->
+  <text x="100" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00D4FF" letter-spacing="2">ACADEMY</text>
+</svg>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>التسجيل | مارسيليا أكاديمي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="loader">
+    <img src="assets/logo-official.png" alt="Marseille Academy" class="loader-logo">
+    <div class="loader-text">MARSEILLE ACADEMY</div>
+    <div class="loader-sub">Football Academy</div>
+  </div>
+
+  <nav class="navbar scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><img src="assets/logo-official.png" alt="Marseille Academy"></div>
+        <div class="logo-text">MARSEILLE <span>ACADEMY</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="matches.html">المباريات</a></li>
+        <li><a href="media.html">الوسائط</a></li>
+        <li><a href="register.html" class="active">التسجيل</a></li>
+        <li><a href="admin.html" class="admin-btn">لوحة التحكم</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <section style="padding-top:130px;padding-bottom:5rem;min-height:100vh">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">انضم إلينا</span>
+        <h1 class="section-title">التسجيل في الأكاديمية</h1>
+        <p class="section-desc">املأ البيانات التالية للتسجيل، ثم اختر طريقة الدفع</p>
+      </div>
+
+      <!-- Kit Showcase -->
+      <div class="kit-showcase" style="opacity:1;transform:none;display:block">
+        <h3 style="margin-bottom:0.5rem;color:var(--accent)">الزي الرسمي للأكاديمية</h3>
+        <p style="color:var(--gray);margin-bottom:1.5rem;font-size:0.95rem">التصميم الرسمي لموسم 2026</p>
+        <div class="kit-animation">
+          <svg class="kit-svg" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg">
+            <!-- Jersey -->
+            <path d="M30 40 L20 55 L25 60 L25 130 Q25 140 40 140 L80 140 Q95 140 95 130 L95 60 L100 55 L90 40 L75 50 L75 35 Q60 25 45 35 L45 50 Z" fill="#0A1628" stroke="#00A8E8" stroke-width="2"/>
+            <!-- Sleeves accent -->
+            <path d="M30 40 L20 55 L25 60 L30 55 Z" fill="#00A8E8"/>
+            <path d="M90 40 L100 55 L95 60 L90 55 Z" fill="#00A8E8"/>
+            <!-- Collar -->
+            <path d="M45 35 Q60 28 75 35 L70 48 Q60 42 50 48 Z" fill="#00A8E8"/>
+            <!-- M Logo on chest -->
+            <text x="60" y="90" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" fill="#00D4FF">M</text>
+            <!-- Shorts -->
+            <path d="M35 140 L35 155 Q35 160 45 160 L55 160 L55 145 L65 145 L65 160 L75 160 Q85 160 85 155 L85 140 Z" fill="#0A1628" stroke="#00A8E8" stroke-width="1.5"/>
+            <!-- Socks -->
+            <rect x="40" y="160" width="12" height="20" rx="2" fill="#00A8E8"/>
+            <rect x="68" y="160" width="12" height="20" rx="2" fill="#00A8E8"/>
+          </svg>
+        </div>
+        <p style="color:var(--gray);font-size:0.9rem">الزي يظهر بعد تأكيد التسجيل والدفع</p>
+      </div>
+
+      <!-- Registration Form -->
+      <div class="reg-form-card" style="opacity:1;transform:none;display:block">
+        <form id="reg-form">
+          <div class="form-group">
+            <label>اسم اللاعب الكامل *</label>
+            <input type="text" id="player-name" required placeholder="الاسم رباعي">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem">
+            <div class="form-group">
+              <label>تاريخ الميلاد *</label>
+              <input type="date" id="player-birth" required>
+            </div>
+            <div class="form-group">
+              <label>السن *</label>
+              <input type="number" id="player-age" min="4" max="18" required placeholder="مثال: 12">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>رقم هاتف ولي الأمر *</label>
+            <input type="tel" id="phone" required placeholder="01xxxxxxxxx">
+          </div>
+
+          <h4 style="margin:1.5rem 0 1rem;color:var(--accent)">طريقة الدفع *</h4>
+          <div class="payment-options">
+            <label class="payment-option active" id="opt-instapay">
+              <input type="radio" name="payment" value="instapay" checked>
+              <img src="assets/instapay.svg" alt="InstaPay" class="pay-logo">
+              <strong style="display:block;margin-top:0.6rem">إنستا باي</strong>
+            </label>
+            <label class="payment-option" id="opt-vodafone">
+              <input type="radio" name="payment" value="vodafone">
+              <img src="assets/vodafone-cash.svg" alt="Vodafone Cash" class="pay-logo">
+              <strong style="display:block;margin-top:0.6rem">فودافون كاش</strong>
+            </label>
+          </div>
+
+          <div id="payment-info" style="background:rgba(0,168,232,0.08);padding:1rem;border-radius:12px;margin-bottom:1.5rem;font-size:0.95rem">
+            <p><strong>إنستا باي:</strong> سيتم التواصل معك برقم الحساب بعد التسجيل</p>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1.1rem">
+            إرسال طلب التسجيل ←
+          </button>
+        </form>
+        <div id="reg-success" class="hidden" style="text-align:center;padding:2rem">
+          <div style="font-size:4rem;margin-bottom:1rem">✅</div>
+          <h3 style="color:var(--success);margin-bottom:0.5rem">تم استلام طلبك بنجاح</h3>
+          <p style="color:var(--gray)">سيتم التواصل معك قريباً لتأكيد الدفع وإتمام التسجيل</p>
+          <a href="index.html" class="btn btn-outline" style="margin-top:1.5rem">العودة للرئيسية</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">© 2026 Marseille Academy</div>
+    </div>
+  </footer>
+
+  <script src="js/supabase-config.js"></script>
+  <script src="js/data.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      if (typeof initSupabase === 'function') {
+        await initSupabase();
+      }
+
+      const loader = document.querySelector('.loader');
+      if (loader) setTimeout(() => loader.classList.add('hidden'), 800);
+
+      // Payment toggle
+      document.querySelectorAll('.payment-option').forEach(opt => {
+        opt.addEventListener('click', () => {
+          document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('active'));
+          opt.classList.add('active');
+          const val = opt.querySelector('input').value;
+          const info = document.getElementById('payment-info');
+          if (val === 'instapay') {
+            info.innerHTML = '<p><strong>إنستا باي:</strong> سيتم التواصل معك برقم الحساب بعد التسجيل</p>';
+          } else {
+            info.innerHTML = '<p><strong>فودافون كاش:</strong> سيتم التواصل معك برقم المحفظة بعد التسجيل</p>';
+          }
+        });
+      });
+
+      // Form submit
+      document.getElementById('reg-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = getData();
+        const reg = {
+          id: Date.now(),
+          playerName: document.getElementById('player-name').value.trim(),
+          birthDate: document.getElementById('player-birth').value,
+          age: document.getElementById('player-age').value,
+          phone: document.getElementById('phone').value.trim(),
+          paymentMethod: document.querySelector('input[name="payment"]:checked').value,
+          status: 'pending',
+          createdAt: new Date().toISOString()
+        };
+        data.registrations = data.registrations || [];
+        data.registrations.unshift(reg);
+        saveData(data);
+        if (typeof saveRegistrationToSupabase === 'function') {
+          saveRegistrationToSupabase(reg).catch(console.error);
+        }
+        document.getElementById('reg-form').classList.add('hidden');
+        document.getElementById('reg-success').classList.remove('hidden');
+      });
+    });
+  </script>
+<script src="js/deco.js"></script>
+</body>
+</html>

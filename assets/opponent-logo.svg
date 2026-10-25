@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#FFA500"/>
+    </linearGradient>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGrad2)" stroke="#FFD700" stroke-width="4"/>
+  <!-- Inner ring -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.5"/>
+  <!-- Big star -->
+  <polygon points="100,35 112,75 155,75 120,100 133,145 100,118 67,145 80,100 45,75 88,75" 
+           fill="url(#starGrad)" stroke="#FFA500" stroke-width="1"/>
+  <!-- Text -->
+  <text x="100" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFD700" letter-spacing="1">STARS ACAD</text>
+</svg>

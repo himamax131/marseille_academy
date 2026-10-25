@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" width="200" height="280">
+  <!-- Shadow -->
+  <ellipse cx="100" cy="268" rx="40" ry="8" fill="#000" opacity="0.2"/>
+  <!-- Legs -->
+  <path d="M75 180 L70 240 L85 245 L90 185 Z" fill="#1a1a1a"/>
+  <path d="M125 180 L130 240 L115 245 L110 185 Z" fill="#1a1a1a"/>
+  <!-- Socks -->
+  <rect x="68" y="235" width="20" height="18" rx="3" fill="#00A8E8"/>
+  <rect x="112" y="235" width="20" height="18" rx="3" fill="#00A8E8"/>
+  <!-- Shoes -->
+  <ellipse cx="78" cy="255" rx="16" ry="8" fill="#222"/>
+  <ellipse cx="122" cy="255" rx="16" ry="8" fill="#222"/>
+  <!-- Body / Jersey black -->
+  <path d="M70 100 Q100 90 130 100 L135 180 Q100 190 65 180 Z" fill="#111"/>
+  <!-- Sleeves -->
+  <path d="M70 105 L45 130 L55 140 L75 115 Z" fill="#111"/>
+  <path d="M130 105 L155 130 L145 140 L125 115 Z" fill="#111"/>
+  <!-- Collar cyan -->
+  <path d="M85 100 Q100 92 115 100 L110 112 Q100 108 90 112 Z" fill="#00A8E8"/>
+  <!-- M Logo on chest -->
+  <text x="100" y="145" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="28" font-weight="900" fill="#00A8E8">M</text>
+  <!-- Shorts -->
+  <path d="M70 175 L70 200 L95 200 L95 180 L105 180 L105 200 L130 200 L130 175 Q100 185 70 175" fill="#0a0a0a"/>
+  <!-- Head -->
+  <circle cx="100" cy="60" r="35" fill="#F5C6A0"/>
+  <!-- Hair -->
+  <path d="M70 50 Q70 25 100 20 Q130 25 130 50 Q120 40 100 38 Q80 40 70 50" fill="#4A3728"/>
+  <!-- Eyes -->
+  <ellipse cx="88" cy="58" rx="5" ry="6" fill="#fff"/>
+  <ellipse cx="112" cy="58" rx="5" ry="6" fill="#fff"/>
+  <circle cx="89" cy="59" r="3" fill="#333"/>
+  <circle cx="113" cy="59" r="3" fill="#333"/>
+  <!-- Smile -->
+  <path d="M90 75 Q100 85 110 75" fill="none" stroke="#c47a5a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Arms pose running -->
+  <path d="M50 135 Q30 120 35 100" fill="none" stroke="#F5C6A0" stroke-width="10" stroke-linecap="round"/>
+  <path d="M150 135 Q170 150 165 170" fill="none" stroke="#F5C6A0" stroke-width="10" stroke-linecap="round"/>
+  <!-- Ball -->
+  <circle cx="160" cy="200" r="22" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <path d="M160 180 L165 195 L180 195 L168 205 L173 220 L160 212 L147 220 L152 205 L140 195 L155 195 Z" fill="#222" opacity="0.8"/>
+</svg>

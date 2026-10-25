@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" width="200" height="280">
+  <ellipse cx="100" cy="268" rx="40" ry="8" fill="#000" opacity="0.2"/>
+  <path d="M78 180 L75 240 L90 242 L92 182 Z" fill="#1a1a1a"/>
+  <path d="M122 180 L125 240 L110 242 L108 182 Z" fill="#1a1a1a"/>
+  <rect x="73" y="235" width="20" height="16" rx="3" fill="#00A8E8"/>
+  <rect x="107" y="235" width="20" height="16" rx="3" fill="#00A8E8"/>
+  <ellipse cx="83" cy="255" rx="15" ry="7" fill="#222"/>
+  <ellipse cx="117" cy="255" rx="15" ry="7" fill="#222"/>
+  <path d="M70 100 Q100 90 130 100 L133 180 Q100 188 67 180 Z" fill="#111"/>
+  <path d="M70 105 L50 140 L62 145 L80 115 Z" fill="#111"/>
+  <path d="M130 105 L150 140 L138 145 L120 115 Z" fill="#111"/>
+  <path d="M85 100 Q100 92 115 100 L110 112 Q100 108 90 112 Z" fill="#00A8E8"/>
+  <text x="100" y="145" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="26" font-weight="900" fill="#00A8E8">M</text>
+  <path d="M70 175 L70 198 L95 198 L95 178 L105 178 L105 198 L130 198 L130 175 Q100 183 70 175" fill="#0a0a0a"/>
+  <circle cx="100" cy="58" r="34" fill="#F5C6A0"/>
+  <path d="M70 50 Q75 20 100 18 Q125 20 130 50 Q115 38 100 36 Q85 38 70 50" fill="#5D4037"/>
+  <ellipse cx="88" cy="55" rx="5" ry="6" fill="#fff"/>
+  <ellipse cx="112" cy="55" rx="5" ry="6" fill="#fff"/>
+  <circle cx="89" cy="56" r="3" fill="#333"/>
+  <circle cx="113" cy="56" r="3" fill="#333"/>
+  <path d="M90 72 Q100 82 110 72" fill="none" stroke="#c47a5a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Holding ball -->
+  <circle cx="55" cy="155" r="20" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <path d="M55 137 L59 150 L72 150 L62 159 L66 172 L55 165 L44 172 L48 159 L38 150 L51 150 Z" fill="#222" opacity="0.8"/>
+  <path d="M50 140 Q40 150 45 165" fill="none" stroke="#F5C6A0" stroke-width="9" stroke-linecap="round"/>
+  <path d="M150 130 Q165 140 160 155" fill="none" stroke="#F5C6A0" stroke-width="9" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المباريات | مارسيليا أكاديمي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="loader">
+    <img src="assets/logo-official.png" alt="Marseille Academy" class="loader-logo">
+    <div class="loader-text">MARSEILLE ACADEMY</div>
+    <div class="loader-sub">Football Academy</div>
+  </div>
+
+  <nav class="navbar scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><img src="assets/logo-official.png" alt="Marseille Academy"></div>
+        <div class="logo-text">MARSEILLE <span>ACADEMY</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="matches.html" class="active">المباريات</a></li>
+        <li><a href="media.html">الوسائط</a></li>
+        <li><a href="register.html">التسجيل</a></li>
+        <li><a href="index.html#about">عن الأكاديمية</a></li>
+        <li><a href="admin.html" class="admin-btn">لوحة التحكم</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section style="padding-top:140px;padding-bottom:4rem;background:var(--gradient)">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">دوري الأكاديمية</span>
+        <h1 class="section-title">متابعة المباريات</h1>
+        <p class="section-desc">تتبع نتائج وإحصائيات مباريات دوري مارسيليا أكاديمي بشكل مباشر ومميز</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:2rem">
+    <div class="container">
+      <div class="matches-list" id="matches-container">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon"><img src="assets/logo-official.png" alt="Marseille Academy"></div>
+            <div class="logo-text">MARSEILLE <span>ACADEMY</span></div>
+          </a>
+          <p>أكاديمية كرة قدم احترافية لصناعة نجوم المستقبل.</p>
+        </div>
+        <div class="footer-links">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="matches.html" class="active">المباريات</a></li>
+            <li><a href="media.html">الوسائط</a></li>
+        <li><a href="register.html">التسجيل</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>تواصل</h4>
+          <ul>
+            <li><a href="https://www.facebook.com/MarseilleAcademy">فيسبوك</a></li>
+            <li><a href="tel:+201009169813">+20 10 09169813</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Marseille Academy</div>
+    </div>
+  </footer>
+
+  <script src="js/supabase-config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+<script src="js/deco.js"></script>
+</body>
+</html>

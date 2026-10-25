@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم | مارسيليا أكاديمي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="login-section" class="admin-login">
+    <div class="login-card">
+      <div style="text-align:center;margin-bottom:1.5rem">
+        <div class="logo-icon" style="margin:0 auto 1rem;width:70px;height:70px">
+          <img src="assets/logo-official.png" alt="Logo">
+        </div>
+        <h2>لوحة التحكم</h2>
+        <p style="color:var(--gray);font-size:0.9rem">سجّل الدخول لإدارة المحتوى</p>
+      </div>
+      <form id="login-form">
+        <div class="form-group">
+          <label>اسم المستخدم</label>
+          <input type="text" id="username" placeholder="hima" required>
+        </div>
+        <div class="form-group">
+          <label>كلمة المرور</label>
+          <input type="password" id="password" required>
+        </div>
+        <p id="login-error" style="color:var(--danger);font-size:0.9rem;margin-bottom:1rem;display:none"></p>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">دخول</button>
+      </form>
+      <p style="text-align:center;margin-top:1.5rem;font-size:0.85rem;color:var(--gray)">
+        <a href="index.html" style="color:var(--accent)">← العودة للموقع</a>
+      </p>
+    </div>
+  </div>
+
+  <div id="admin-dashboard" class="admin-dashboard">
+    <nav class="navbar scrolled">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><img src="assets/logo-official.png" alt="Logo"></div>
+          <div class="logo-text">ADMIN <span>PANEL</span></div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">عرض الموقع</a></li>
+          <li><button id="logout-btn" class="admin-btn" style="cursor:pointer;border:none;font-family:var(--font-main)">تسجيل الخروج</button></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="padding-top:2rem;padding-bottom:4rem">
+      <h1 class="section-title" style="margin-bottom:2rem">إدارة المحتوى</h1>
+
+      <div class="admin-tabs">
+        <button class="admin-tab active" data-panel="panel-stats">الإحصائيات</button>
+        <button class="admin-tab" data-panel="panel-news">الأخبار</button>
+        <button class="admin-tab" data-panel="panel-matches">المباريات</button>
+        <button class="admin-tab" data-panel="panel-media">الوسائط</button>
+        <button class="admin-tab" data-panel="panel-regs">التسجيلات</button>
+      </div>
+
+      <!-- Stats Panel -->
+      <div id="panel-stats" class="admin-panel active">
+        <h3>تعديل إحصائيات الصفحة الرئيسية</h3>
+        <form id="stats-form">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div class="form-group">
+              <label>عدد اللاعبين المسجلين</label>
+              <input type="text" id="stat-players-input" placeholder="350+">
+            </div>
+            <div class="form-group">
+              <label>عدد المدربين</label>
+              <input type="text" id="stat-coaches-input" placeholder="15+">
+            </div>
+            <div class="form-group">
+              <label>الفئات العمرية</label>
+              <input type="text" id="stat-ages-input" placeholder="8">
+            </div>
+            <div class="form-group">
+              <label>نسخة الدوري</label>
+              <input type="text" id="stat-league-input" placeholder="1st">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">حفظ الإحصائيات</button>
+        </form>
+      </div>
+
+      <!-- News Panel -->
+      <div id="panel-news" class="admin-panel">
+        <h3>إضافة خبر / منشور فيسبوك</h3>
+        <form id="news-form">
+          <div class="form-group">
+            <label>عنوان المنشور *</label>
+            <input type="text" id="news-title" required>
+          </div>
+          <div class="form-group">
+            <label>وصف مختصر</label>
+            <textarea id="news-excerpt" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <label>لينك فيسبوك *</label>
+            <input type="url" id="news-url" required placeholder="https://www.facebook.com/...">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div class="form-group">
+              <label>النوع</label>
+              <select id="news-mediatype">
+                <option value="post">منشور / صورة</option>
+                <option value="video">فيديو</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>التاريخ</label>
+              <input type="date" id="news-date">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>صورة المعاينة * (ارفع صورة من المنشور عشان تظهر في الكارت)</label>
+            <input type="file" id="news-image-file" accept="image/*">
+            <p style="font-size:0.8rem;color:var(--gray);margin-top:0.4rem">أو ضع رابط صورة مباشرة:</p>
+            <input type="url" id="news-image" placeholder="https://...jpg" style="margin-top:0.4rem">
+          </div>
+          <button type="submit" class="btn btn-primary">إضافة الخبر</button>
+        </form>
+        <div class="admin-list">
+          <h3 style="margin-top:2rem">الأخبار الحالية</h3>
+          <div id="news-list"></div>
+        </div>
+      </div>
+
+      <!-- Matches Panel -->
+      <div id="panel-matches" class="admin-panel">
+        <h3>إضافة مباراة (مارسيليا أكاديمي ثابت)</h3>
+        <form id="match-form">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div class="form-group">
+              <label>البطولة</label>
+              <input type="text" id="match-league" value="دوري مارسيليا أكاديمي">
+            </div>
+            <div class="form-group">
+              <label>الحالة</label>
+              <select id="match-status">
+                <option value="upcoming">قادمة</option>
+                <option value="live">مباشر</option>
+                <option value="finished">انتهت</option>
+              </select>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div class="form-group">
+              <label>التاريخ *</label>
+              <input type="date" id="match-date" required>
+            </div>
+            <div class="form-group">
+              <label>الوقت</label>
+              <input type="time" id="match-time" value="15:00">
+            </div>
+          </div>
+
+          <h4 style="color:var(--accent);margin:1.5rem 0 1rem">الفريق المنافس</h4>
+          <div style="display:grid;grid-template-columns:2fr 1fr;gap:1rem">
+            <div class="form-group">
+              <label>اسم الفريق *</label>
+              <input type="text" id="opp-name" required>
+            </div>
+            <div class="form-group">
+              <label>شعار الفريق (صورة)</label>
+              <input type="file" id="opp-logo" accept="image/*">
+            </div>
+          </div>
+
+          <h4 style="color:var(--accent);margin:1.5rem 0 1rem">إحصائيات مارسيليا أكاديمي</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem">
+            <div class="form-group"><label>استحواذ</label><input type="text" id="ma-poss" placeholder="55%"></div>
+            <div class="form-group"><label>تسديدات</label><input type="text" id="ma-shots" placeholder="12"></div>
+            <div class="form-group"><label>أهداف</label><input type="text" id="ma-goals" placeholder="2"></div>
+          </div>
+
+          <h4 style="color:var(--accent);margin:1.5rem 0 1rem">إحصائيات المنافس</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem">
+            <div class="form-group"><label>استحواذ</label><input type="text" id="opp-poss" placeholder="45%"></div>
+            <div class="form-group"><label>تسديدات</label><input type="text" id="opp-shots" placeholder="8"></div>
+            <div class="form-group"><label>أهداف</label><input type="text" id="opp-goals" placeholder="1"></div>
+          </div>
+
+          <h4 style="color:var(--accent);margin:1.5rem 0 1rem">النتيجة (اختياري)</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div class="form-group"><label>مارسيليا أكاديمي</label><input type="number" id="score1" min="0"></div>
+            <div class="form-group"><label>المنافس</label><input type="number" id="score2" min="0"></div>
+          </div>
+
+          <h4 style="color:var(--accent);margin:1.5rem 0 1rem">مسجلي الأهداف (اختياري)</h4>
+          <p style="color:var(--gray);font-size:0.85rem;margin-bottom:0.8rem">اكتب الأسماء مفصولة بفاصلة ، مثال: أحمد علي، محمد حسن</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div class="form-group">
+              <label>هدافي مارسيليا أكاديمي</label>
+              <input type="text" id="scorers1" placeholder="أحمد، محمد، علي">
+            </div>
+            <div class="form-group">
+              <label>هدافي الفريق المنافس</label>
+              <input type="text" id="scorers2" placeholder="اسم1، اسم2">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">إضافة المباراة</button>
+        </form>
+        <div class="admin-list">
+          <h3 style="margin-top:2rem">المباريات الحالية</h3>
+          <div id="matches-list"></div>
+        </div>
+      </div>
+
+      <!-- Media Panel -->
+      <div id="panel-media" class="admin-panel">
+        <h3>إضافة وسائط / بوست</h3>
+        <form id="media-form">
+          <div class="form-group">
+            <label>النوع</label>
+            <select id="media-type">
+              <option value="facebook">منشور فيسبوك</option>
+              <option value="video">فيديو</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>العنوان *</label>
+            <input type="text" id="media-title" required>
+          </div>
+          <div class="form-group">
+            <label>الوصف</label>
+            <textarea id="media-desc" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <label>اللينك *</label>
+            <input type="url" id="media-url" required placeholder="https://www.facebook.com/...">
+          </div>
+          <div class="form-group">
+            <label>التاريخ</label>
+            <input type="date" id="media-date">
+          </div>
+          <button type="submit" class="btn btn-primary">إضافة</button>
+        </form>
+        <div class="admin-list">
+          <h3 style="margin-top:2rem">الوسائط الحالية</h3>
+          <div id="media-list"></div>
+        </div>
+      </div>
+
+      <!-- Registrations Panel (PRIVATE) -->
+      <div id="panel-regs" class="admin-panel">
+        <h3>طلبات التسجيل (خاص - للإدارة فقط)</h3>
+        <p style="color:var(--gray);margin-bottom:1.5rem;font-size:0.9rem">هذه البيانات لا تظهر للمستخدمين العاديين</p>
+        <div id="regs-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/supabase-config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+<script src="js/deco.js"></script>
+</body>
+</html>
